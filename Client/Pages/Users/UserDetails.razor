@@ -1,0 +1,102 @@
+﻿@page "/fetchuserdetails"
+@using BlazorCRUDSqlLiteApp.Shared.Models
+@inject HttpClient http
+
+<PageTitle>User List</PageTitle>
+<h1>User Data</h1>
+<p>Blazor CRUD operation</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="user/add" class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i> Add User
+        </a>
+    </div>
+    <div class="input-group col">
+        <input type="text" class="form-control" placeholder="Enter search text here..."
+               @bind="SearchString" @bind:event="oninput" @onkeyup="FilterUser" />
+        @if (SearchString.Length > 0)
+        {
+            <div class="input-group-append">
+                <button class="btn btn-danger" @onclick="ResetSearch">
+                    X
+                </button>
+            </div>
+        }
+    </div>
+</div>
+<br />
+@if (userList.Count == 0)
+{
+    <p><em>No Data Found</em></p>
+}
+else
+{
+    <table class="col-md-12 table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>ContactNo</th>
+                <th>EmailId</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in userList)
+            {
+                <tr>
+                    <td>@user.Username</td>
+                    <td>@user.Address</td>
+                    <td>@user.Cellnumber</td>
+                    <td>@user.Emailid</td>
+                    <td>
+                        <a href="user/edit/@user.Userid" class="btn btn-outline-dark" role="button">Edit</a>
+                        <a href="user/delete/@user.Userid" class="btn btn-outline-danger" role="button">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    protected string SearchString { get; set; } = String.Empty;
+    protected List<User> userList = new();
+    protected List<User> searchUserData = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetUsers();
+    }
+
+    protected async Task GetUsers()
+    {
+        userList = await http.GetFromJsonAsync<List<User>>("api/User/GetUsers");
+        searchUserData = userList;
+    }
+
+    protected void FilterUser()
+    {
+        if (!string.IsNullOrEmpty(SearchString))
+        {
+            userList = searchUserData
+                        .Where(w => w.Username.Contains(SearchString)
+                                || w.Address.Contains(SearchString)
+                                || w.Cellnumber.Contains(SearchString)
+                                || w.Emailid.Contains(SearchString))
+                        .ToList();
+        }
+        else
+        {
+            userList = searchUserData;
+        }
+    }
+
+    protected void ResetSearch()
+    {
+        SearchString = String.Empty;
+        userList = searchUserData;
+    }
+
+}

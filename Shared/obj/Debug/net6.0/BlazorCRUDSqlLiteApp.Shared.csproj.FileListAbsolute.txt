@@ -1,0 +1,12 @@
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\bin\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.deps.json
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\bin\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.dll
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\bin\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.pdb
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.csproj.AssemblyReference.cache
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.AssemblyInfoInputs.cache
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.AssemblyInfo.cs
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.dll
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\refint\BlazorCRUDSqlLiteApp.Shared.dll
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\BlazorCRUDSqlLiteApp.Shared.pdb
+C:\Users\Ranit Saha\source\repos\BlazorCRUDSqlLiteApp\Shared\obj\Debug\net6.0\ref\BlazorCRUDSqlLiteApp.Shared.dll
